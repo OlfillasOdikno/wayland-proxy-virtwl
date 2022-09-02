@@ -1,4 +1,6 @@
-with import <nixpkgs> {};
+{ pkgs ? import <nixpkgs> {} }:
+
+with pkgs;
 let
   ocaml = ocaml-ng.ocamlPackages_4_12.ocaml;
   opam2nix = import ./nix/opam2nix.nix;
